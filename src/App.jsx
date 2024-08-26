@@ -17,7 +17,6 @@ function App() {
       navigate('/react-MealApp/auth')
     } else {
       navigate('/react-MealApp/meals/all')
-
     }
   }, [isLoggedIn])
 
