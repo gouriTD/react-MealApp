@@ -14,9 +14,9 @@ function App() {
   useEffect(() => {
 
     if (!isLoggedIn) {
-      navigate('/auth')
+      navigate('/react-MealApp/auth')
     } else {
-      navigate('/meals/all')
+      navigate('/react-MealApp/meals/all')
 
     }
   }, [isLoggedIn])
