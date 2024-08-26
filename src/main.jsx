@@ -19,7 +19,7 @@ import ErrorPage from "./components/Error";
 // Lets start defining our browser router here.
 
 const routingDefinition = createRoutesFromElements(
-  <Route path='/' errorElement={<ErrorPage />} element={<App />}>
+  <Route path='/react-MealApp/' errorElement={<ErrorPage />} element={<App />}>
     <Route path='auth' element={<Login />} />
     <Route path='meals' element={<RootLayout />}>
       <Route path="all" element={<Meals />} />
