@@ -1,0 +1,42 @@
+.item{
+  display: flex;
+  list-style: decimal;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.item .title{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button{
+  cursor: pointer;
+}
+
+.quantity{
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.quantity button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  border: none;
+  background-color: #4b4b4b;
+  color: azure;
+  cursor: pointer;
+}
+
+.quantity button:hover,
+.quantity button:active {
+  background-color:black
+}
+
