@@ -3,8 +3,8 @@ export async function sendPostData (url,data){
             method: 'post',
             body: JSON.stringify(data),
             headers:{
-                'Content-type':'application/json'
-            }
+                'Content-Type':'application/json',
+            },
         }
         const response = await fetch(url,config)
         if(!response.ok){

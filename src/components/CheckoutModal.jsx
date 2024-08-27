@@ -11,8 +11,10 @@ const { BASE_URL } = CONSTANTS
 
 function CheckoutModal() {
     const[orderPlaced,setOrderPlaced] = useState(null)
+    const [orderError,setOrderError] = useState(null)
     const { modalProgress,hideCheckOut} = useModalContext()
     const ctx = useContext( MealContext )
+    
 
     const handleClear = ()=>{
      ctx.clearCart()
@@ -40,7 +42,8 @@ function CheckoutModal() {
             
         } catch (error) {
             console.log(error.message)
-            throw json({message:error.message},{status:500})
+            // throw json({message:error.message},{status:500})
+            setOrderError('Error while placing order')
         }
     }
 
@@ -68,7 +71,7 @@ function CheckoutModal() {
             
             <button className='button' onClick={handleClose}>Close</button>
         </>}
-        {!orderPlaced && <CheckOutForm total={getTotal()} handleOrderPlacement={handleOrderPlacement} onClose={handleClose}/>}
+        {!orderPlaced && <CheckOutForm total={getTotal()} handleOrderPlacement={handleOrderPlacement} onClose={handleClose} error={orderError} setError={()=>setOrderError(null)}/>}
         
     </Modal>
   )

@@ -1,7 +1,6 @@
 import React from 'react'
 import Input from './Input'
 import { useAuthContext } from '../store/auth'
-import {useNavigate} from 'react-router-dom'
 
 const DEFAULT_LOGIN = {
     email: 'test@test.com',
@@ -12,14 +11,12 @@ const DEFAULT_LOGIN = {
 function Login() {
 
     const {login} = useAuthContext()
-    const navigate = useNavigate()
 
     const submitHandler = (e)=>{
         e.preventDefault()
         const formData = new FormData(e.target)
         const formDataObj = Object.fromEntries(formData.entries())
         login(formDataObj)
-        navigate('/meals/all')
     }
   return (
     <div id='login-container'>

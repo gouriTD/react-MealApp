@@ -60,7 +60,7 @@ const CartModal = forwardRef(function CartModal(props,ref) {
                 method: 'post',
                 body: JSON.stringify(orderData),
                 headers:{
-                    'Content-type':'application/json'
+                    'Content-Type':'application/json'
                 }
             }
             const response = await fetch(BASE_URL + 'orders',config)

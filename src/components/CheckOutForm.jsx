@@ -3,7 +3,7 @@ import Input from './Input'
 import ModalActionButtons from './ModalActionButtons'
 import { currencyFormater } from '../utility/currencyConverter'
 
-function CheckOutForm({total,handleOrderPlacement,onClose}) {
+function CheckOutForm({total,handleOrderPlacement,onClose,error,setError}) {
 
   useEffect(()=>{
     console.log('Checkout Form mounting')
@@ -17,6 +17,8 @@ function CheckOutForm({total,handleOrderPlacement,onClose}) {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
+    // Removing error display on resending the request.
+    setError()
     const formData = new FormData(e.target)
     const formDataObj = Object.fromEntries(formData.entries())
     handleOrderPlacement(formDataObj)
@@ -37,8 +39,8 @@ function CheckOutForm({total,handleOrderPlacement,onClose}) {
                 <button type="button" className='text-button' onClick={onClose}>Close</button>
                 <button className='button'> Place Order</button>
         </ModalActionButtons>
-
     </form>
+    {error && <p id='error'>{error}</p>}
     </>
   )
 }
