@@ -1,6 +1,6 @@
 # REACT MEAL APP
 
-## This app allows the user to do the following:
+## This is a demo app which allows the user to do the following:
 * Login to the app to start ordering for meal.
 * Default email and password is given which should be used for login or user can type in any email / password there is no check associated with it.
 * Once the user logs in they can select the meal items from the menu provided.
