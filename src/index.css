@@ -299,6 +299,12 @@ form .input{
   color: lightcoral;
 }
 
+#info{
+  text-align: center;
+  font-size: 1.2rem;
+  color:#ffc404
+}
+
 /* Links css */
 
 nav{

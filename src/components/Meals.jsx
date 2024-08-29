@@ -12,8 +12,9 @@ function Meals() {
   const {isFetchingData,searchedMeals,error} = useFetchData()
 
   if (isFetchingData && searchedMeals.length === 0) {
-    return <p>Loading data ...</p>
+    return <p id='info'>Loading data ...</p>
   }
+  console.log(isFetchingData)
   return (
     <div id='meals-container'>
       {error && <p id="error">{error.message}</p>}

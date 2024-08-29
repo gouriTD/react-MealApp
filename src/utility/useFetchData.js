@@ -5,7 +5,7 @@ import { CONSTANTS } from '../utility/constants'
 const { BASE_URL } = CONSTANTS
  
  const useFetchData = ()=>{
-    const [isFetchingData, setIsFecthingData] = useState(false)
+    const [isFetchingData, setIsFetchingData] = useState(false)
     const [error, setError] = useState()
     const [searchedMeals, setSearchedMeals] = useState([])
   
@@ -15,7 +15,7 @@ const { BASE_URL } = CONSTANTS
     useEffect(() => {
   
       async function getMeals() {
-        setIsFecthingData(true)
+        setIsFetchingData(true)
         setError(null)
   
         fetch(BASE_URL + 'meals')
@@ -34,7 +34,7 @@ const { BASE_URL } = CONSTANTS
             console.log(err.message)
             setError({ message: err.message })
           })
-          .finally(setIsFecthingData(false))
+          .finally(()=>setIsFetchingData(false))
       }
   
       if (meals && meals.length > 0) {
@@ -44,7 +44,7 @@ const { BASE_URL } = CONSTANTS
       }
   
     }, [])
-  
+
     return {
       isFetchingData,
       error,
