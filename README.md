@@ -7,4 +7,6 @@
 * A search is provided to quickly search for interested meal.
 * User can mark a meal as their favourite and see in the Favourite tab.
 * Once the meal items are selected , they are placed in the cart.
-* If the user is satisfied with the meal , they can place the order and see it being placed with the backend. 
+* If the user is satisfied with the meal , they can open the checkout form for placing their order.
+* The user can enter their details in the form provided and place their order , which when successfully submitted to the backend would show the order being created.
+* [Demo](https://gouritd.github.io/react-MealApp/)
